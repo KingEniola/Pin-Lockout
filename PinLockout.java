@@ -1,9 +1,7 @@
 /*
- * Yetunde Eniola Adegbegha
- * yadegbeg@oldwestbury.edu
+ * Eniola 
  * 11/22/2021
  */
-package hw6;
 
 import java.util.*;
 import java.io.*;
@@ -22,10 +20,10 @@ public class PinLockout {
 		int tries = 1;                                     // initialized to 1 to count number of tries
 		
 		
-		System.out.println("ENTER YOUR PIN: ");           // prompt to enter pin
+		System.out.println("ENTER YOUR PIN: ");          
 		
 		
-		while ( !scan.hasNextInt())                         // to guide user to type in the correct data type
+		while ( !scan.hasNextInt())                         //  guide user to type in the correct data type
 		{
 			//flush
 			garbage = scan.nextLine();
@@ -35,7 +33,7 @@ public class PinLockout {
 			System.out.println("ENTER YOUR PIN: ");
 		}	
 		
-		int pinNum = scan.nextInt();                              // to scan input from the keyboard
+		int pinNum = scan.nextInt();                             
 		
 		while (pinNum != PIN)                                    // to check if the pin is correct and re-prompt if wrong 
 		{
@@ -45,14 +43,14 @@ public class PinLockout {
 		     pinNum = scan.nextInt();
 			tries++;
 			
-			if(tries == 3 && pinNum != PIN)                    // to lock account if pin is wrong three times
+			if(tries == 3 && pinNum != PIN)                    // locks account if pin is wrong three times
 			{
 				System.out.println("YOU HAVE RUN OUT OF TRIES. ACCOUNT LOCKED.");
 			    break;
 			}  
 		}
 	    
-	 if (pinNum == PIN)                                          // to check if the pin is correct
+	 if (pinNum == PIN)                                          
 		 System.out.println("PIN ACCEPTED. YOU NOW HAVE ACCESS TO YOUR ACCOUNT.");
 	    
 	}
